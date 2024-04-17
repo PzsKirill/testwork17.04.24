@@ -1,0 +1,60 @@
+.header__section {
+  margin: 25px 0;
+  h2 {
+    margin: 25px 0;
+    text-align: center;
+  }
+  .pentagon__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    width: max-content;
+    margin: 0 auto;
+    @media (max-width:1100px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:720px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 420px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pentagon {
+      width: 250px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      @media (max-width:520px) {
+        width: 180px;
+        height: 100%;
+      }
+      .inner-image {
+        position: absolute;
+        top: 45%;
+        left: 50.5%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+        @media (max-width:520px) {
+          position: absolute;
+          top: 45%;
+          left: 50.5%;
+          transform: translate(-50%, -50%);
+          transition: transform 0.3s ease;
+          width: 130px;
+          height: 130px;
+        }
+      }
+    
+      &:hover {
+        .inner-image {
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+      }
+    
+      .pentagon-svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
